@@ -10,7 +10,7 @@ Instead of a traditional portfolio, I built an interactive game-like experience 
 
 ## 🎮 Live Portfolio
 
-[**Explore Quest for the Code**]([YOUR_DEPLOYED_PORTFOLIO_URL](https://tsukishima07.github.io/quest-for-the-code/))
+[https://tsukishima07.github.io/quest-for-the-code/](https://tsukishima07.github.io/quest-for-the-code/)
 
 ## ✨ Features
 
