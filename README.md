@@ -63,7 +63,7 @@ portfolio/
 ### 1. Clone the repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/tsukishima07/quest-for-the-code
 ```
 
 ### 2. Navigate to the project directory
@@ -127,7 +127,3 @@ Full credit and appreciation to Deepank Yadav for the inspiration.
 This project is intended as a personal developer portfolio. The original concept and inspiration are credited to Deepank Yadav.
 
 Please refer to the original creator's repository for applicable licensing and reuse terms.
-
----
-
-\<p align="center"> \<b>⚔️ BUILT WITH CURIOSITY. POWERED BY CODE. ⚔️\</b> \<br/> \<i>Every quest begins with a single line of code.\</i> \</p>
