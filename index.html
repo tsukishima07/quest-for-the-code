@@ -80,6 +80,10 @@
       <span class="audio-icon">*</span>
       <span class="audio-label">SPELL</span>
     </button>
+    <button class="audio-btn active" id="btn-fx" onclick="toggleFX()" title="Toggle Background Effects">
+      <span class="audio-icon">✦</span>
+      <span class="audio-label">AURA</span>
+    </button>
   </div>
 
   <div class="hud-nav">
@@ -90,6 +94,7 @@
     <button class="nav-btn" onclick="playClick();showZone('blogs')">📜 Certs</button>
     <button class="nav-btn" onclick="playClick();showZone('education')">🎓 Study</button>
     <button class="nav-btn" onclick="playClick();showZone('achievements')">🏆 Awards</button>
+    <button class="nav-btn" onclick="playClick();showZone('arcade')">🕹 Arcade</button>
     <button class="nav-btn" onclick="playClick();showZone('contact')">📡 Contact</button>
     <button class="nav-btn" onclick="playClick();backToMap()">🗺 MAP</button>
   </div>
@@ -103,7 +108,7 @@
     <div style="font-family:'Press Start 2P',monospace; font-size:9px; color:var(--dim);">SELECT YOUR DESTINATION</div>
   </div>
 
-  <!-- 6 main zones in a clean 3-col grid -->
+  <!-- 9 zones in a clean 3x3 grid -->
   <div class="world-grid">
     <div class="zone-card" onclick="showZone('about'); gainXP(this)">
       <span class="zone-icon">👤</span>
@@ -135,14 +140,16 @@
       <div class="zone-name">ACADEMY</div>
       <div class="zone-desc">Knowledge scrolls</div>
     </div>
-  </div>
 
-  <!-- Last 2 zones — always perfectly centred via flexbox -->
-  <div class="world-grid-last">
     <div class="zone-card" onclick="showZone('achievements'); gainXP(this)">
       <span class="zone-icon">🏆</span>
       <div class="zone-name">TROPHY VAULT</div>
       <div class="zone-desc">Legendary achievements</div>
+    </div>
+    <div class="zone-card" onclick="showZone('arcade'); gainXP(this)">
+      <span class="zone-icon">🕹</span>
+      <div class="zone-name">ARCADE</div>
+      <div class="zone-desc">Play Bug Hunter</div>
     </div>
     <div class="zone-card" onclick="showZone('contact'); gainXP(this)">
       <span class="zone-icon">📡</span>
@@ -186,6 +193,9 @@
   </button>
   <button class="bnav-btn" onclick="playClick();showZone('achievements')">
     <span class="bnav-icon">🏆</span>AWARDS
+  </button>
+  <button class="bnav-btn" onclick="playClick();showZone('arcade')">
+    <span class="bnav-icon">🕹</span>GAME
   </button>
   <button class="bnav-btn" onclick="playClick();showZone('contact')">
     <span class="bnav-icon">📡</span>CONTACT

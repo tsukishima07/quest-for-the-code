@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════
-   DEEPANK YADAV — PORTFOLIO STYLESHEET
+   VAMSI KRISHNA — PORTFOLIO STYLESHEET
    Quest for the Code | styles.css
 ═══════════════════════════════════════════════════ */
 
@@ -247,7 +247,7 @@ body::before {
    WORLD MAP
 ══════════════════════════════ */
 #world-screen {
-  background: var(--bg);
+  background: transparent;
   padding-top: 65px;
   padding-bottom: 80px;
   overflow-y: auto;
@@ -319,7 +319,7 @@ body::before {
    PANEL SCREEN
 ══════════════════════════════ */
 #panel-screen {
-  background: rgba(10,10,26,0.97);
+  background: rgba(10,10,26,0.4);
   padding-top: 65px;
   padding-bottom: 90px;
   overflow-y: auto;
@@ -726,6 +726,7 @@ body::before {
   /* Collapse 6-col to 2-col on mobile */
   .world-grid            { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px 10px 0; }
   .world-grid .zone-card { grid-column: span 1; }
+  .world-grid .zone-card:last-child { grid-column: 1 / -1; justify-self: center; width: calc(50% - 5px); }
   .world-grid-last       { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 10px 12px; }
   .world-grid-last .zone-card:first-child { grid-column: 1 / 2; }
   .world-grid-last .zone-card:last-child  { grid-column: 2 / 3; }
@@ -763,6 +764,7 @@ body::before {
   #world-screen          { padding-top: 65px; padding-bottom: 85px; }
   .world-grid            { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 8px 8px 0; }
   .world-grid .zone-card { grid-column: span 1; }
+  .world-grid .zone-card:last-child { grid-column: 1 / -1; justify-self: center; width: calc(50% - 4px); }
   .world-grid-last       { grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 0 8px 10px; }
   .world-grid-last .zone-card:first-child { grid-column: 1 / 2; }
   .world-grid-last .zone-card:last-child  { grid-column: 2 / 3; }
@@ -830,3 +832,26 @@ body::before {
 .ofw-pill.ofw-hud { margin-top: 0; padding: 5px 9px; font-size: 7px; margin-left: 8px; }
 @media (max-width: 900px) { .ofw-pill.ofw-hud { display: none; } }
 #t-ofw { width: fit-content; margin: 16px auto 0; }
+
+/* ── Arcade: Bug Hunter ── */
+.game-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; }
+.game-canvas {
+  --ar: 0.75;
+  width: min(100%, 960px, calc((100vh - 335px) * var(--ar)));
+  min-width: min(100%, 260px);
+  aspect-ratio: var(--ar);
+  display: block; margin: 0 auto;
+  border: 3px solid var(--border);
+  box-shadow: 0 0 26px rgba(0,229,255,0.35), inset 0 0 20px rgba(0,229,255,0.1);
+  background: #070b1d; cursor: pointer; touch-action: none;
+}
+.game-pad { display: flex; gap: 16px; }
+.game-btn {
+  width: 84px; height: 52px; font-size: 22px;
+  background: rgba(0,229,255,0.08); color: var(--border);
+  border: 2px solid var(--border); cursor: pointer; user-select: none; touch-action: none;
+}
+.game-btn:active { background: rgba(0,229,255,0.3); }
+.game-help { font-size: 14px; color: var(--dim); text-align: center; }
+@media (hover: hover) and (pointer: fine) { .game-pad { display: none; } }
+@media (hover: none) { .game-canvas { width: min(100%, calc((100vh - 430px) * var(--ar))); } }
